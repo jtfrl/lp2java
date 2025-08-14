@@ -29,7 +29,7 @@ class Introjava{
        for(int i=0;i<s.length;i++){
          System.out.print("Row "+i+": ");
             for(int j=0;j<s[i].length;j++){
-                System.out.print.print(s[i][j]+" ")
+                System.out.print.print(s[i][j]+" ");
 
         }
        }
