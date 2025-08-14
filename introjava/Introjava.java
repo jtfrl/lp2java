@@ -1,25 +1,25 @@
 class Introjava{
     public static void main(String args[]){
-        System.out.println("Olá\n");
+        System.out.println("Testando java\n");
 
         String[] v=new String [5];
         v[0]="+";
 
-       // v={"*", "³", "Ö", "a", "Ø"};
+        String[] j={"*", "³", "Ö", "a", "Ø"};
+        //não é possível algo como v={"a", "b"...};
+
+        for(String letra:j){
+            System.out.println(letra+"\n");
+        }
        
-
-        int[] t=new int[5];
-
-        t[]={4,5,99,12,1};
-
-        /*
-        outras implementações com vetor
+     
+        //outras implementações com vetor
         int[][]s= new int[3][];
+        s[0]=new int[1];
+        s[3][3]=8;
 
-        s[3][]
+        System.out.print(s);
 
-        //checar depois
-
-        */
+       
     }
 }
