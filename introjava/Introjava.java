@@ -6,12 +6,13 @@ class Introjava{
         String[] v=new String [5];
         v[0]="+";
 
-        String[] j={"*", "³", "Ö", "a", "Ø"};
+        String[] w={"*", "³", "Ö", "a", "Ø"};
         //não é possível algo como v={"a", "b"...};
 
-        for(String letra:j){
-            System.out.println(letra+"\n");
+        for(String letra:w){
+            System.out.print(letra+" ");
         }
+        System.out.print("\n\n\n");
        
      
         //outras implementações com vetor
@@ -27,10 +28,9 @@ class Introjava{
         s[2][0]=19;
 
        for(int i=0;i<s.length;i++){
-         System.out.print("Row "+i+": ");
+         System.out.print("Row "+i+": \n");
             for(int j=0;j<s[i].length;j++){
-                System.out.print.print(s[i][j]+" ");
-
+                System.out.print(s[i][j]+" \n");
         }
        }
 
