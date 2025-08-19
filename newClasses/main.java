@@ -7,7 +7,7 @@ class main{
 
         p01.atualizarNome("Teste");
 
-        p01.habilidade[0]=h01;
+        p01.hab[0]=h01;
 
 
     }
