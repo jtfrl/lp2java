@@ -1,7 +1,7 @@
 class Biblioteca{
     Livro ini;
     Livro prox;
-    int totalAcervo;,
+    //int totalAcervo;
     int totalAlunosB; //total de alunos com emp.
     //Livro[] acv; //acervo de livros
     Usuario lista_u;

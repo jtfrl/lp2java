@@ -7,7 +7,7 @@ class Usuario{
         this.mat=m;
     }
 
-    void cadastrarUs(String n, int m){
+    void cadastrarUs(Usuario u){
         //busca na base para ver se o usuário já está lá
 
     }
