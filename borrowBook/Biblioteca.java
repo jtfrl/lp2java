@@ -49,20 +49,30 @@ class Biblioteca{
 
 
     void exibir(){
-        Livro at;
-        while(at!=null){ //ver que alteração deve ser feita em at!
-            System.out.println(at.titulo+"-->");
-            at=at.prox; //mostrar que livros foram emprestados
-        }
-        System.out.println();
+        Livro at=lista_l;
 
-        if(var.empAtivo==true){
-            //impl: mostra a lista com o nome do usuário associado
-        }else{
-            //o livro não emprestado deve vir com 'S/E'
-            // S/E -> sem empréstimo atual
+        System.out.println("CATÁLOGO DE LIVROS\n");
+        System.out.println("LEGENDA: S/E='SEM EMPRÉSTIMO\n"+
+        "C/E='COM EMPRÉSTIMO ATIVO'\n");
+
+        while(at!=null){ //ver que alteração deve ser feita em at!
+            System.out.println("' "+at.titulo+" '"+" por "+at.autor);
+           
+           
+           if(at.qtd>0){
+            System.out.println(" ::: DISPONÍVEL (S/E)\n");
+            System.out.println(" ::: Há alguns livros que não foram emprestados.\n");
+
+           }else{
+            System.out.println(" ::: C/E");
+           }
+             at=at.prox;
+          //mostrar que livros foram emprestados
         }
+          System.out.println();
     }
+
+
 
 
 
