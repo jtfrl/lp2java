@@ -1,4 +1,3 @@
-import java.util.Arrays;
 class Emprestimo{
     /*
     INSTRUÇÕES DA ATIVIDADE
@@ -19,8 +18,8 @@ class Emprestimo{
        this.l_emp=lemp;
        empAtivo=true;
 
-       //função para indicar que o livro não está disponível
-       l_emp.realizarEmp(uemp.mat, lemp.cod);
+       //!!!função para indicar que o livro não está disponível
+       //l_emp.realizarEmp(uemp.mat, lemp.cod);
     }
 
     void downEmp(){
@@ -40,24 +39,6 @@ class Emprestimo{
         this.empAtivo=false;
         //ver como chamar devolver aqui
     }
-
-
-    //o segundo for seria ideal para o acervo em si
-    Boolean realizarEmp(int idUs, int cdLivro){
-        for(int i=0;i<u_emp.lenght;i++){
-            if(u_emp[i]==idUs){
-                for(int j=0;j<l_emp.lenght;j++){
-                    if(l_emp[j]==cdLivro){
-                        //adciona o usuário na lista de livros emprestados
-                    }
-                }
-            }
-        }
-    }
-
-
-
-
 
    
 }
