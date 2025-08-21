@@ -13,15 +13,18 @@ class Livro{
     }
 
     Boolean devolver(Livro l){ 
-        //impl: mostrar que o livro voltou ao acervo
         this.qtd++;
+        System.out.println("Devolução realizada: "+this.titulo);
         return regDev=true;
     }
 
-    Boolean realizarEmp(Livro l){
-         //impl: mostrar que o livro saiu do acervo
-        //metodo para adicionar na lista   
-        if(this.qtd>0){ this.qtd--; return regDev=true;}
+    Boolean posRealizarEmp(Livro l){
+         //mostra se o livro saiu com emprestimo realizado
+        if(this.qtd>0){ 
+            this.qtd--; 
+            System.out.println("Empréstimo realizado.\n"); 
+            return regDev=true;
+        }
         else{
             System.out.println("Livro não disponível\n");
             return regDev=false;

@@ -22,19 +22,6 @@ class Emprestimo{
        //l_emp.realizarEmp(uemp.mat, lemp.cod);
     }
 
-    void downEmp(){
-        if(empAtivo){
-            // impl: o acervo da biblioteca deve diminuir
-        }
-
-        // talvez seja útil ver totalAcervo aqui
-    }
-
-    void upEmp(){
-        // impl: função que vai fazer o oposto de
-        // downEmp
-    }
-
     void devolver(){
         this.empAtivo=false;
         //ver como chamar devolver aqui

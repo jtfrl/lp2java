@@ -12,6 +12,30 @@ class Biblioteca{
         //novol.qtd++;
     }
 
+
+    boolean rmvEmp(int c, int q, String t, String a){
+        
+        //função que vai mostra que houve emp. de um título
+        //remove o livro da lista
+        if(q!=1){
+            System.err.println("Não foi possível remover o livro\n");
+            return false;
+        }
+        
+        Livro livro2Rmv=new Livro(c, q, t, a);
+        Livro ant=null;
+
+        while(livro2Rmv!=null){
+            if(livro2Rmv.titulo.equals(t) && 
+            livro2Rmv.cod==c && livro2Rmv.equals(a)){
+                if(ant==null){
+                    //como inserir o início da lista aqui?
+                }
+            }
+        }
+    }
+
+
     void InsListadeAlunos(String n, int m){
         Usuario novou=new Usuario(n, m);
         novou.prox=lista_u;
@@ -73,7 +97,23 @@ class Biblioteca{
     }
 
 
+    boolean realizarEmp(String n, int mat, int cod){
+        Usuario uEmp=new Usuario(n, mat);
+        Livro lEmp=new Livro(cod); //ajustar para receber só o código
 
+        if(uEmp==null || lEmp==null){
+            System.err.println("Usuário/Código não informado(s)\n");
+            return false;
+        }
 
+        boolean empEfetivado=lEmp.regDev;
+
+        if(empEfetivado){
+            Emprestimo novoEmp=new Emprestimo(uEmp, lEmp);
+            return true;
+        }
+
+        return false;
+    }
 
 }
