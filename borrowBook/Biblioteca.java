@@ -65,12 +65,11 @@ class Biblioteca{
                 Emprestimo empAtual=lista_emp;
                 while(empAtual!=null){
                     if(empAtual.l_emp.cod==at.cod && empAtual.empAtivo){
-                        System.out.println("EMPRÉSTIMO: "+empAtual.u_emp.nome);
+                        System.out.println("EMPRÉSTIMO: "+empAtual.u_emp.nome+"\n\n");
                         break;
                     }
                     empAtual=empAtual.prox;
                 }
-                at=at.prox;
 
            }else{
             System.out.println(" ::: C/E");
@@ -78,15 +77,18 @@ class Biblioteca{
                 System.out.println(at.titulo+" ::: Todos os livros desse título foram emprestados\n ");
             }
            }
-             at=at.prox;
+             at=at.prox; //aqui é onde ocorre a atualização da varredura
         }
           System.out.println();
     }
 
 
     boolean realizarEmp(String n, int mat, int cod){
-        Usuario uEmp=new Usuario(n, mat);
-        Livro lEmp=sqLSearch(cod);
+       // Usuario uEmp=new Usuario(n, mat);
+       // Livro lEmp=sqLSearch(cod);
+
+       Usuario uEmp=sqUSearch(mat);
+       Livro lEmp=sqLSearch(cod);
 
         if(uEmp==null || lEmp==null){
             System.err.println("Usuário/Código não informado(s)\n");

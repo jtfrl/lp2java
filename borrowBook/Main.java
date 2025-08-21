@@ -50,20 +50,35 @@ class Main{
                       }
                       
                       case 2:{
+                        /* 
+                         int matricula;//variáveis locais evitam repetição na msg de emp.
+                        String nome;
+                        int cod;
+                          */
+
+                        Usuario alunoEmpOp2=new Usuario("Nome", 0000000);
+                        Livro lvEmpOp2=new Livro(999999, 999, "Titulo", "Autor");
+
+
                         System.out.println("Insira a matrícula: \n");
-                        alunoEmp.mat=s.nextInt();
+                        //matricula=s.nextInt(); (teste)
+                        alunoEmpOp2.mat=s.nextInt();
                         s.nextLine();
                         System.out.println("Insira o nome do aluno: \n");
-                        alunoEmp.nome=s.nextLine();
-                        s.nextLine();
+                        //nome=s.nextLine(); (teste)
+                        //s.nextLine();
+                        alunoEmpOp2.nome=s.nextLine();
                         System.out.println("Insira o código do livro: \n");
-                        lvEmp.cod=s.nextInt();
+                        //cod=s.nextInt(); (teste)
+                        lvEmpOp2.cod=s.nextInt();
+                        
 
-                        if(emUso.realizarEmp(alunoEmp.nome, alunoEmp.mat, lvEmp.cod)){
-                          System.out.println("Empréstimo realizado. \n");
-                        }else{
-                          System.err.println("ATENÇÃO: Emprestimo não efetuado. \n");
-                        }
+
+                          if(emUso.realizarEmp(alunoEmpOp2.nome, alunoEmpOp2.mat, lvEmpOp2.cod)){
+                            System.out.println("Empréstimo realizado. \n");
+                          }else{
+                            System.err.println("ATENÇÃO: Emprestimo não efetuado. \n");
+                          }
 
                         break;
                       }
@@ -90,6 +105,7 @@ class Main{
                           boolean status=lvEmp.posRealizarEmp();
                           if(status){
                             System.out.println("Livro disponível\n.");
+                            System.out.println("TÍTULO \t AUTOR \t QUANTIDADE \n");
                             System.out.println(lvEmp.titulo+" \t"+lvEmp.autor+"\t"+lvEmp.qtd+"\n");
                           }                         
 
