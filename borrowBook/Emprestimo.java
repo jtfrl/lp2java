@@ -1,30 +1,22 @@
 class Emprestimo{
-    /*
-    INSTRUÇÕES DA ATIVIDADE
-    A classe Emprestimo deve representar a ação de um usuário pegando um livro emprestado, 
-    com atributos que referenciam o livro e o usuário envolvidos no empréstimo, e 
-    métodos para realizar o empréstimo (marcando o 
-    livro como indisponível) e para devolver o livro 
-    (marcando-o novamente como disponível).
-
-
-    */
    Usuario u_emp;
    Livro l_emp;
    Boolean empAtivo;
+   Emprestimo prox;
 
     Emprestimo(Usuario uemp, Livro lemp){
        this.u_emp=uemp;
        this.l_emp=lemp;
-       empAtivo=true;
-
-       //!!!função para indicar que o livro não está disponível
-       //l_emp.realizarEmp(uemp.mat, lemp.cod);
+       this.prox=null;
+       empAtivo=l_emp.posRealizarEmp();
     }
 
     void devolver(){
-        this.empAtivo=false;
-        //ver como chamar devolver aqui
+        if(this.empAtivo){
+            this.empAtivo=false;
+            this.l_emp.devolver();
+            System.out.println("Livro devolvido: "+this.l_emp.titulo);
+        }
     }
 
    

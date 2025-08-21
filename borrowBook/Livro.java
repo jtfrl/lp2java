@@ -12,14 +12,15 @@ class Livro{
         this.prox=null;
     }
 
-    Boolean devolver(Livro l){ 
+    boolean devolver(){ 
         this.qtd++;
         System.out.println("Devolução realizada: "+this.titulo);
         return regDev=true;
     }
 
-    Boolean posRealizarEmp(Livro l){
+    boolean posRealizarEmp(){
          //mostra se o livro saiu com emprestimo realizado
+        //colocado como para Emprestimo, mas ta aqui 
         if(this.qtd>0){ 
             this.qtd--; 
             System.out.println("Empréstimo realizado.\n"); 
