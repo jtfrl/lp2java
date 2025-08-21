@@ -84,11 +84,11 @@ class Biblioteca{
 
 
     boolean realizarEmp(String n, int mat, int cod){
-       // Usuario uEmp=new Usuario(n, mat);
-       // Livro lEmp=sqLSearch(cod);
+        Usuario uEmp=new Usuario(n, mat);
+        Livro lEmp=sqLSearch(cod);
 
-       Usuario uEmp=sqUSearch(mat);
-       Livro lEmp=sqLSearch(cod);
+       //Usuario uEmp=sqUSearch(mat);
+       //Livro lEmp=sqLSearch(cod);
 
         if(uEmp==null || lEmp==null){
             System.err.println("Usuário/Código não informado(s)\n");
