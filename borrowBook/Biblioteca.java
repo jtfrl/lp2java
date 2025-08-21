@@ -97,8 +97,7 @@ class Biblioteca{
             System.out.println("Livro não disponível.\n");
         }
 
-        boolean empEfetivado=lEmp.regDev;
-
+        boolean empEfetivado=lEmp.posRealizarEmp();
 
         if(empEfetivado){
             Emprestimo novoEmp=new Emprestimo(uEmp, lEmp);

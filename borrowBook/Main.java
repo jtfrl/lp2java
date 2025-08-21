@@ -22,7 +22,7 @@ class Main{
 
                 boolean uOpt=false;
 
-                if(op>5 || op<1){
+                if(op>7 || op<1){
                   System.err.println("Solicite um valor de opção entre 1 e 4\n");
                 }else{
                   uOpt=true;
@@ -33,8 +33,11 @@ class Main{
                       case 1:{
                         System.out.println("Insira a matrícula: \n");
                         alunoEmp.mat=s.nextInt();
+                        s.nextLine();
                         System.out.println("Insira o nome do aluno: \n");
                         alunoEmp.nome=s.nextLine();
+                       // s.nextLine();
+
 
                         emUso.InsListadeAlunos(alunoEmp.nome, alunoEmp.mat);
                         if(emUso.sqUSearch(alunoEmp.mat)!=null){
@@ -49,8 +52,10 @@ class Main{
                       case 2:{
                         System.out.println("Insira a matrícula: \n");
                         alunoEmp.mat=s.nextInt();
+                        s.nextLine();
                         System.out.println("Insira o nome do aluno: \n");
                         alunoEmp.nome=s.nextLine();
+                        s.nextLine();
                         System.out.println("Insira o código do livro: \n");
                         lvEmp.cod=s.nextInt();
 
@@ -66,6 +71,7 @@ class Main{
                       case 3:{
                         System.out.println("Insira o código do livro: \n");
                         lvEmp.cod=s.nextInt();
+
                         
                         if(emUso.devolverLivro(lvEmp.cod)){
                           System.out.println("Livro devolvido: "+lvEmp.titulo);
@@ -77,6 +83,7 @@ class Main{
                       case 4:{
                          System.out.println("Insira o título do livro: \n");
                           lvEmp.titulo=s.nextLine();
+                          s.nextLine();
                           System.out.println("Insira o autor:\n");
                           lvEmp.autor=s.nextLine();
 
@@ -97,10 +104,13 @@ class Main{
                        case 6:{
                         System.out.println("Insira o código do livro: \n");
                         lvEmp.cod=s.nextInt();
+                        s.nextLine();
                         System.out.println("Insira a quantidade da(s) unidade(s) do(s) livro: \n");
                         lvEmp.qtd=s.nextInt();
+                        s.nextLine();
                         System.out.println("Insira o autor:\n");
                         lvEmp.autor=s.nextLine();
+                        //s.nextLine();
                         System.out.println("Insira o título:\n");
                         lvEmp.titulo=s.nextLine();
 
