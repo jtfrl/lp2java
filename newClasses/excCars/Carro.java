@@ -9,4 +9,8 @@ public class Carro{
         this.motordoCarro=mCarro;
     }
 
+    @Override //atua para que listaG não use endereços de memória
+    public String toString(){
+        return "Carro - (modelo=' "+modelo+"', ano="+ano+")";
+    }
 }

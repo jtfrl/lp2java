@@ -1,10 +1,23 @@
+
+import java.util.Arrays;
+
+
 public class Garagem{
     String nome;
-    private Carro[] cars;
+    private Carro[] cars=new Carro[50];
+    private int sizeG=0;
 
     Garagem(String nome, Carro[] cs){
         this.nome=nome;
-        this.cars=null;
+        this.cars=cs;
+    }
+
+    public int tam(){
+        return cars.length;
+    }
+
+    public int currentNumOcupation(){
+        return sizeG;
     }
 
     public void addCarro(Carro v){
@@ -12,16 +25,12 @@ public class Garagem{
             System.err.println("Informe um carro válido\n");
         }
 
-        
+        cars[sizeG]=v;
+        sizeG++;
     }
 
 
-/*
-copia defensiva
- public Classe(Teste[] arraytest, int cod) {
-        this.arraytest = Arrays.copyOf(arraytest, arraytest.length);
-        this.cod = cod;
+    public void listaG(){
+        System.out.println(Arrays.toString(cars));
     }
-
-*/
 }
