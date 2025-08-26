@@ -4,7 +4,15 @@ public class Garagem{
 
     Garagem(String nome, Carro[] cs){
         this.nome=nome;
-        this.cars=cs;
+        this.cars=null;
+    }
+
+    public void addCarro(Carro v){
+        if(v.modelo==null || v.ano<0 || v.motordoCarro==null){
+            System.err.println("Informe um carro válido\n");
+        }
+
+        
     }
 
 
