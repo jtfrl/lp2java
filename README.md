@@ -3,6 +3,8 @@ Códigos desenvolvidos na disicplina de Linguagens de Progamação 2 (IMD/UFRN) 
 
 ## Tabela de assuntos por pasta
 
+Algumas pastas listadas aqui estão dentro de outras (exercícios que envolvem classes, por exemplo, estão na pasta newClasses e lá tem o excBank).
+
 <table>
   <tbody>
     <tr>
@@ -31,6 +33,15 @@ Códigos desenvolvidos na disicplina de Linguagens de Progamação 2 (IMD/UFRN) 
       </td>
       <td>
         borrowBook
+      </td>
+      </tr>
+       <tr>
+     <td>1</td>
+      <td align="left">
+          Modificadores de acesso (private, public, default etc.)
+      </td>
+      <td>
+        excBank
       </td>
       </tr>
 </table>
