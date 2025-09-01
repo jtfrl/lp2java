@@ -15,9 +15,12 @@ class notaPrim{
         System.out.println("Insira os valores das notas: \n");
         for(int i=0;i<5;i++){
             System.out.println("Nota "+(i+1)+": \n");
+            System.out.println();
             v=s.nextDouble();
             arr[i]=v;
         }
+         System.out.println();
+
     }
     
 
@@ -31,6 +34,11 @@ class notaPrim{
         }
 
         m=t/arr.length;
+
+        double formated_m=m;
+        String valFmtd=String.format("%.02f", formated_m); //formatação
+
+        System.out.println("MÉDIA: "+valFmtd+"\n");
         return m;
     }
 

@@ -3,9 +3,9 @@ class notaWprr{
     private Double[] arr=new Double[5];
 
     notaWprr(){
-        arr[0]=3.5;
-        arr[1]=3.5;
-        arr[2]=7.0;
+        arr[0]=1.6;
+        arr[1]=1.0;
+        arr[2]=10.0;
         arr[3]=null;
         arr[4]=null;
     }
@@ -20,7 +20,13 @@ class notaWprr{
            if(arr[i]!=null) t+=arr[i];
         }
 
-        m=t/arr.length;
+        m=t/3;
+
+        
+        Double formated_m=m;
+        String valFmtd=String.format("%.02f", formated_m); //formatação
+
+        System.out.println("MÉDIA: "+valFmtd+"\n");
         return m;
     }
 
