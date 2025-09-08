@@ -13,9 +13,8 @@ class Park{
 
 
     void regCar(Car carr){
-        //if(parkedCars.contains(carr)) ---> ver qual é o equivalente de contains para queue
+        if(parkedCars.contains(carr))
         traffic.remove(carr);
-
     }
     /*
     void seeRepeatedCars(Car carr){
