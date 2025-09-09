@@ -2,12 +2,13 @@
 public class Car{
     String placa;
     String nome; //pessoa dona do carro
-    Car prox;
+    timeCar tempo_do_carro;
+    //Car prox;
     
-    Car(String pl, String n){
+    Car(String pl, String n, timeCar t){
         this.placa=pl;
         this.nome=n;
-        this.prox=null;
+        this.tempo_do_carro=t;
     }
 
     @Override //atua para que listaG não use endereços de memória
