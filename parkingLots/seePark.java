@@ -21,7 +21,31 @@ public class seePark{
               boolean uOpt=false;
 
               if(op<1 || op>3){
-                System.err.println("");
+                System.err.println("Solicite uma opção válida\n");
+              
+              }else{
+                uOpt=true;
+              }
+
+              if(uOpt){
+                switch(op){
+                  case 1:{
+
+                  }
+
+                  case 2:{
+
+                  }
+
+                  case 3:{
+                    rnn=false;
+                    System.out.println("Saindo do programa\n");
+
+                  }
+                  default:{
+                    break;
+                  }
+                }
               }
 
 

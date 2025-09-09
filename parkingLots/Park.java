@@ -3,8 +3,8 @@ import java.util.Queue;
 
 class Park{
     //int tempoEmMin; //deve estar no intervalo de 5 a 240 
-    ArrayList<Car> traffic=new ArrayList<>();//carros para entrar no estacionamento
-    Queue<Car> parkedCars; 
+    public ArrayList<Car> traffic=new ArrayList<>();//carros para entrar no estacionamento
+    public Queue<Car> parkedCars; 
 
     Park(Queue<Car> CarsinLine){
         this.parkedCars=CarsinLine;
