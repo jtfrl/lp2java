@@ -1,10 +1,10 @@
 import java.util.ArrayList;
-import java.util.Queue; 
+import java.util.LinkedList;
+import java.util.Queue;
 
 class Park{
-    //int tempoEmMin; //deve estar no intervalo de 5 a 240 
     public ArrayList<Car> traffic=new ArrayList<>();//carros para entrar no estacionamento
-    public Queue<Car> parkedCars; 
+    public Queue<Car> parkedCars= new LinkedList<>(); 
 
     Park(Queue<Car> CarsinLine){
         this.parkedCars=CarsinLine;
@@ -15,17 +15,36 @@ class Park{
         if(traffic.contains(carr)){
         traffic.remove(carr);
             if(!parkedCars.contains(carr)){
+            carr.regEnter();
             parkedCars.add(carr);
+            System.out.println("Carro: "+carr.seePl()+" entrou. Horário:"+
+            carr.getTempo().seeEnter());
             }
         }
     }
 
-    //void Date() //o professor sugere new Date(), mas criei um tipo para ca 
-    /*
-    void seeRepeatedCars(Car carr){
-    //função para verificar com o método .contains() se o carro
-    está no estacionamento
-    //vai impedir que carros iguais sejam registrados duas vezes ou mais. 
+
+    void rmvCar(Car carr){
+            if(parkedCars.contains(carr)){
+            parkedCars.remove(carr);
+            carr.regLeave();
+            System.out.println("Carro: "+ carr.seePl()+" saiu. Horário de saída: "+
+            carr.getTempo().getDuration());
+        }
     }
-   */ 
+
+    void addTrafiic(Car carr){
+        if(!traffic.contains(carr)) traffic.add(carr);
+    }
+
+      void displayParkingStatus() {
+        System.out.println("\n--- Status do estacionamento ---");
+        System.out.println("Carros para entrar: " + traffic.size()+"\n\n");
+        System.out.println("Carros estacionados: " + parkedCars.size()+"\n\n");
+        
+        for (Car car : parkedCars) {
+            long duration = car.getTempo().getDuration();
+            System.out.println("Car " + car.seePl() + " - Estacionado por: " + duration + " minutos");
+        }
+    }
 }
