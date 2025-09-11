@@ -17,15 +17,11 @@ public class seePark{
 
        filaDeCarros.add(c1);
         filaDeCarros.add(c2);
-         
-      
         
         Park emUso=new Park(filaDeCarros);
         
         emUso.addTrafiic(c4);
         emUso.addTrafiic(c3);
-
-
         
         while(rnn){
              System.out.println("1. verificar carros\n 2 verificar tempo de permanência\n"+
@@ -50,16 +46,20 @@ public class seePark{
                   }
 
                   case 2:{
-                    for(Car car:filaDeCarros){
-                      car.getTempo();
-                         if(car.getTempo() != null) {
-                            long tempo = car.getTempo().getDuration();
-                            System.out.println("Carro " + car.seePl() + 
-                                             ": " + tempo + " minutos");
+                    System.out.println("Tempo de permanência: \n");
+                      for(Car car:filaDeCarros){
+                        car.getTempo();
+                          if(car.getTempo() != null) {
+                              long tempo = car.getTempo().getDuration();
+                              System.out.println("Carro " + car.seePl() + 
+                                              ": " + tempo + " minutos\n");
+                          } 
+                          else{
+                            System.out.println("Carro "+car.seePl()+" não está"+ 
+                            "não tem tempo registrado no sistema\n");
+                          }
                     }
-
-                    break;
-
+                        break;
                   }
 
                   case 3:{
@@ -67,6 +67,7 @@ public class seePark{
                     System.out.println("Saindo do programa\n");
                     break;
                   }
+
                   default:{
                     break;
                   }
@@ -75,5 +76,6 @@ public class seePark{
 
         }
         
+        s.close();
     }
 }

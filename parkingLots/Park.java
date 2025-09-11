@@ -8,6 +8,7 @@ class Park{
 
     Park(Queue<Car> CarsinLine){
         this.parkedCars=CarsinLine;
+        for(Car c:parkedCars) c.regEnter();
     }
 
 
@@ -44,7 +45,7 @@ class Park{
         
         for (Car car : parkedCars) {
             long duration = car.getTempo().getDuration();
-            System.out.println("Car " + car.seePl() + " - Estacionado por: " + duration + " minutos");
+            System.out.println("Car " + car.seePl() + " - Estacionado por: " + duration + " minutos\n");
         }
     }
 }
