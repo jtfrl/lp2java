@@ -8,12 +8,14 @@
 public class wID{
     static int hID;
 
-    public wID() {
+    public wID(int id) {
+        this.hID=id;
         
     }
 
-    public static int hashCode(){
-        return hashCode(hID);
+    public static int hashCodeID(wID idd){
+        //int val=idd.hID;
+        return idd.hashCode();
     }
     
 }
