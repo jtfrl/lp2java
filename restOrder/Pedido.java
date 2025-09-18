@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 /*
 Antes de tentar
  entregar um pedido, o 
@@ -6,8 +6,6 @@ Antes de tentar
  se ele está pronto para ser entregue. 
  Somente pedidos que estejam "prontos" poderão ser entregues.
 */
-
-import java.util.Scanner;
 
 
 public class Pedido{
@@ -43,6 +41,10 @@ public class Pedido{
    rOrder seeStatus(){
     return this.pedidostts;
    }
+
+   int seeNOrdem(){
+    return this.id;
+   }
    
 
    public void changeStatus(rOrder novoSts){
@@ -57,17 +59,72 @@ public class Pedido{
 
    public void changeInfo(){
     int op;
-    System.out.println("Informe a opção que você deseja: ");
-    Scanner s=new Scanner(System.in);
-    op=s.nextInt();
-    /*
-    if(s<1||s>2){
-        throw new 
+    boolean rnn=true;
+            while(rnn){
+                System.out.println("Informe a opção que você deseja: ");
+                System.out.println("1. mudar status \n 2. sair do programa\n");
+                Scanner s=new Scanner(System.in);
+                op=s.nextInt();
+                boolean uOpt=false;
+                if(op<1||op>2){
+                    IllegalArgumentException e=new IllegalArgumentException("Valor diferente de 1 e de 2\n");
+                    throw new IllegalArgumentException("Selecione 1 ou 2.\n", e);
+                }else{
+                    uOpt=true;
+                }
+                if(uOpt){
+                    switch (op) {
+                        case 1:{        
+                        // rOrder rNum=new rOrder();
+                            System.out.println("Informe a opção correspondente ao status: ");
+
+                            System.out.println( " PENDENTE(1), PREPARANDO(2), PRONTO(3),"+
+                    "ENTREGUE(4), CANCELADO(5);");
+                        int optRorder=s.nextInt();
+
+                        if(optRorder<1||optRorder>5){
+                            IllegalArgumentException e=new IllegalArgumentException("Valor inválido\n");
+                            throw new IllegalArgumentException("Tente novamente\n", e);
+                        }
+                        rOrder newStatus=null;
+                        
+                        //converte o valor para o número da ordem 
+                        for(rOrder orderStatus: rOrder.values()){
+                            if(orderStatus.getR()==optRorder){
+                                newStatus=orderStatus;
+                                break;
+                            }
+                        }
+
+                        if(newStatus!=null){
+                            this.pedidostts=newStatus;
+                             System.out.println("Status alterado para: " + newStatus);
+                        }
+                    
+                            break;
+                        }
+                            
+                        
+                        case 2:{
+                            rnn=false;
+                            System.out.println("Saindo do programa\n");
+                        break;
+                        }
+                            default:{
+                            break;
+                            }
+                    }
+                }
+
+            }
     }
-    */
 
-  }
+    public boolean comecarEntrega(){
+        if(this.pedidostts==rOrder.PRONTO) return true;
+        return false;
+    }
 
+ 
   public void canc(){
     //this.pedidostts=rOrder.PENDENTE;
     if(this.pedidostts==rOrder.ENTREGUE){
