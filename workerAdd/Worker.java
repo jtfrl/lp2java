@@ -1,12 +1,12 @@
 public class Worker{
-    private final String nome;
-    private wID idWorker;
+    public final String nome;
+    public wID idWorker;
     private double sal;
 
 
-    Worker(String n, wID idW, double salario){
+    Worker(String n, int idW, double salario){
         this.nome=n;
-        this.idWorker=idW;
+        this.idWorker=new wID(idW); //cria um id com base no inteiro inserido
         this.sal=salario;
     }
 }
