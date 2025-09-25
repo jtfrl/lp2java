@@ -7,11 +7,11 @@ tiver menos de 3 livros emprestados.
 estiver disponível.
 */
 
-class LivroBib{
+public class LivroBib{
     private int cod, qtd;
-     private String titulo, autor;
+    private String titulo, autor;
     private Boolean regDev; //registro de devolução
-     private LivroBib prox;
+    protected LivroBib prox;
 
     public LivroBib(int c, int q, String t, String a){
         this.cod=c;
