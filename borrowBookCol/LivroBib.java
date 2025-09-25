@@ -8,17 +8,15 @@ estiver disponível.
 */
 
 public class LivroBib{
-    private int cod, qtd;
+    public int cod, qtd;
     private String titulo, autor;
     private Boolean regDev; //registro de devolução
-    protected LivroBib prox;
 
     public LivroBib(int c, int q, String t, String a){
         this.cod=c;
         this.qtd=q;
         this.titulo=t;
         this.autor=a;
-        this.prox=null;
     }
 
     boolean devolver(){ 
@@ -40,15 +38,6 @@ public class LivroBib{
             return regDev=false;
         }
     }   
-
-
-//Integer qtdEmp=lEmp.qtd;
-//lista_l.stream().filter( n-> n<3).<.>
-/*
-
-no lugar de <.> colocar a implementação restante
-*/
-
 
 
 }
