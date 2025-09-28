@@ -9,7 +9,7 @@ estiver disponível.
 
 public class LivroBib{
     public int cod, qtd;
-    private String titulo, autor;
+    protected String titulo, autor;
     private Boolean regDev; //registro de devolução
 
     public LivroBib(int c, int q, String t, String a){
